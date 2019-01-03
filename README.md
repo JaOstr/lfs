@@ -1,2 +1,3 @@
-# lfs
-Linux from Scratch - my take
+# Linux from Scratch - my take
+
+
