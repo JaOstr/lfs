@@ -15,13 +15,12 @@ Version check - what I had to change on CentOS 7:
 sudo yum remove byacc // The system had Berkeley yacc installed
                       // We want /usr/bin/yacc to link to bison
 sudo ln -s /usr/bin/bison /usr/bin/yacc
-### Correct gcc
-sudo yum install centos-release-scl-rh
-sudo yum install devtoolset-3-gcc devtoolset-3-gcc-c++
-sudo scl enable devtoolset-3 bash
+### Correct gcc and make
+sudo yum install centos-release-scl
+sudo yum install devtoolset-7
+scl enable devtoolset-7 bash
 ### Correct Texinfo
 sudo yum install texinfo
-### Correct make
-sudo yum install devtoolset-6-make
-sudo mv /opt/rh/devtoolset-6/root/bin/make /bin/make
+### Correct patch
+sudo yum install patch
 
